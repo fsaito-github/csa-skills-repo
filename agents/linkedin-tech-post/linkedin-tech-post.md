@@ -31,7 +31,7 @@ Ao receber um tema, produza posts seguindo este workflow:
 | `contexto` | Experiência real que motivou o post | Recomendado |
 | `audiencia` | Público-alvo (devs, líderes, arquitetos, geral) | tech leads e arquitetos |
 | `tom` | didático, provocativo, storytelling, técnico-direto | didático |
-| `tamanho` | Curto (~500 chars), Médio (~1200 chars), Longo (~2500 chars) | Longo |
+| `tamanho` | Curto (~500 chars), Médio (~1500 chars), Longo (~2800 chars) | Longo |
 | `idiomas` | pt, en, ou ambos | ambos |
 | `cta` | Call-to-action (pergunta, link, convite) | pergunta aberta |
 
@@ -74,6 +74,12 @@ Ao receber um tema, produza posts seguindo este workflow:
 - 3 a 5 hashtags relevantes
 - Mix de amplas (#AI, #DevOps) e específicas (#GitHubCopilot)
 
+**⚠️ Limite de caracteres do LinkedIn:**
+- O LinkedIn permite no máximo **3000 caracteres** por post (incluindo hashtags)
+- O post final DEVE ter no máximo 2950 caracteres (margem de segurança)
+- Se o post ficar acima de 2950 chars, cortar conteúdo redundante mantendo hook, estrutura e CTA
+- Sempre contar os caracteres antes de entregar e informar a contagem ao autor
+
 **Idiomas (se ambos):**
 1. Escrever primeiro em PT-BR (versão primária)
 2. Adaptar para EN — reescrever com naturalidade, não traduzir literalmente
@@ -87,6 +93,7 @@ Antes de entregar, verificar:
 - [ ] É autêntico? Soa como pessoa real compartilhando experiência?
 - [ ] Escaneável? Dá pra entender a mensagem batendo o olho?
 - [ ] Tamanho adequado?
+- [ ] Dentro do limite? Post tem no máximo 2950 caracteres (limite LinkedIn: 3000)?
 - [ ] Sem auto-promoção vazia?
 - [ ] CTA natural?
 - [ ] Hashtags relevantes (3-5)?
