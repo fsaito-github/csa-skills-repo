@@ -1,9 +1,10 @@
-# 📝 Skill: LinkedIn Tech Post
+# 📝 Agent: LinkedIn Tech Post
 
 ## Propósito
-Criar posts técnicos otimizados para LinkedIn a partir de temas, experiências ou
-aprendizados. Gera conteúdo bilíngue (PT-BR + EN), com formatação nativa para
-LinkedIn (Unicode bold, quebras de linha, hashtags), pronto para copiar e publicar.
+Agente especializado em criar posts técnicos otimizados para LinkedIn a partir
+de temas, experiências ou aprendizados. Gera conteúdo bilíngue (PT-BR + EN),
+com formatação nativa para LinkedIn (Unicode bold, quebras de linha, hashtags),
+pronto para copiar e publicar.
 
 ## Quando usar
 - Ao querer publicar sobre um tema técnico, aprendizado ou caso de uso
