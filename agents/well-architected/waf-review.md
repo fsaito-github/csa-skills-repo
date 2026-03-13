@@ -1,9 +1,9 @@
-# 🏗️ Skill: Well-Architected Framework Review
+# 🏗️ Agent: Well-Architected Framework Review
 
 ## Propósito
-Conduzir uma análise estruturada de arquitetura baseada nos 5+1 pilares do
-Azure Well-Architected Framework (WAF), identificando gaps, riscos e
-recomendações priorizadas.
+Agente especializado em conduzir análises estruturadas de arquitetura baseadas
+nos 5+1 pilares do Azure Well-Architected Framework (WAF), identificando gaps,
+riscos e recomendações priorizadas.
 
 ## Quando usar
 - Assessment inicial de arquitetura de um cliente

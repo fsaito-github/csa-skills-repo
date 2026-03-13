@@ -1,9 +1,9 @@
-# 🔬 Skill: Research Técnico
+# 🔬 Agent: Research Técnico
 
 ## Propósito
-Realizar pesquisa técnica aprofundada sobre tecnologias, serviços e padrões da
-plataforma Azure/Microsoft Cloud, gerando um briefing estruturado que o CSA pode
-usar para se preparar rapidamente para engajamentos com clientes.
+Agente especializado em pesquisa técnica aprofundada sobre tecnologias, serviços
+e padrões da plataforma Azure/Microsoft Cloud, gerando um briefing estruturado
+que o CSA pode usar para se preparar rapidamente para engajamentos com clientes.
 
 ## Quando usar
 - Antes de um engajamento técnico com cliente sobre um tema que precisa revisar

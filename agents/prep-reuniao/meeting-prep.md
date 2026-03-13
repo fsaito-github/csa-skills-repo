@@ -1,9 +1,9 @@
-# 📋 Skill: Meeting Prep (Preparação para Reunião)
+# 📋 Agent: Meeting Prep (Preparação para Reunião)
 
 ## Propósito
-Preparar-se de forma estruturada para reuniões técnicas com clientes, parceiros
-ou time interno, garantindo que o CSA chegue com contexto, agenda e talking
-points prontos.
+Agente especializado em preparação estruturada para reuniões técnicas com
+clientes, parceiros ou time interno, garantindo que o CSA chegue com contexto,
+agenda e talking points prontos.
 
 ## Quando usar
 - Antes de qualquer reunião técnica com cliente

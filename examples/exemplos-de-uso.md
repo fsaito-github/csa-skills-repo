@@ -1,6 +1,6 @@
-# 📖 Exemplos de Uso — CSA Skills Repo
+# 📖 Exemplos de Uso — CSA Agents Repo
 
-Exemplos práticos de como usar os skills no dia a dia com o GitHub Copilot CLI.
+Exemplos práticos de como usar os agentes no dia a dia com o GitHub Copilot CLI.
 
 ---
 
@@ -12,7 +12,7 @@ Exemplos práticos de como usar os skills no dia a dia com o GitHub Copilot CLI.
 # Abra o Copilot CLI dentro do repo (carrega copilot-instructions.md automaticamente)
 cd csa-skills-repo
 
-copilot "Seguindo o skill de research técnico em skills/research-tecnico/research-tecnico.md,
+copilot "Seguindo o agente de research técnico em agents/research-tecnico/research-tecnico.md,
 faça um briefing sobre Azure AI Foundry Agents para cenário de atendimento ao
 cliente no varejo. Foque em: integração com Teams, custos, e limitações atuais."
 ```
@@ -27,7 +27,7 @@ comparativo, quick start e talking points.
 ### Cenário: Cliente financeiro pediu uma revisão de arquitetura
 
 ```bash
-copilot "Seguindo o skill WAF em skills/well-architected/waf-review.md,
+copilot "Seguindo o agente WAF em agents/well-architected/waf-review.md,
 analise esta arquitetura:
 
 - App web Java Spring Boot em AKS (single region, Brazil South)
@@ -49,7 +49,7 @@ rede) e confiabilidade (single region para banco), com recomendações priorizad
 ### Cenário: Proposta para modernização de sistema legado
 
 ```bash
-copilot "Seguindo o skill de solution design em skills/arquitetura-solucao/solution-design.md,
+copilot "Seguindo o agente de solution design em agents/arquitetura-solucao/solution-design.md,
 desenhe uma arquitetura para:
 
 Cenário: Empresa de logística com sistema de rastreamento on-premises (C# .NET Framework 4.8,
@@ -71,7 +71,7 @@ real-time, Communication Services ou Twilio para WhatsApp, com roadmap faseado.
 ### Cenário: Reunião de acompanhamento com cliente de saúde
 
 ```bash
-copilot "Seguindo o skill de meeting prep em skills/prep-reuniao/meeting-prep.md,
+copilot "Seguindo o agente de meeting prep em agents/prep-reuniao/meeting-prep.md,
 prepare-me para:
 
 Reunião amanhã 10h com Hospital Albert Einstein.
@@ -89,24 +89,24 @@ custos e operação, talking points diferenciados para CISO vs time técnico.
 
 ## 💡 Dicas de uso avançado
 
-### Combinando skills
+### Combinando agentes
 ```bash
 copilot "Primeiro faça um research técnico sobre Azure VMware Solution
-(seguindo skills/research-tecnico/research-tecnico.md), e depois use esse
+(seguindo agents/research-tecnico/research-tecnico.md), e depois use esse
 contexto para preparar a reunião de amanhã com o Einstein
-(seguindo skills/prep-reuniao/meeting-prep.md)."
+(seguindo agents/prep-reuniao/meeting-prep.md)."
 ```
 
 ### Criando variações para seu contexto
 ```bash
-# Copie um skill e adapte para sua área
-cp skills/research-tecnico/research-tecnico.md skills/research-tecnico/research-security.md
+# Copie um agente e adapte para sua área
+cp agents/research-tecnico/research-tecnico.md agents/research-tecnico/research-security.md
 # Edite para focar em security (Defender, Sentinel, Zero Trust)
 ```
 
 ### Usando com WorkIQ (M365 Copilot)
 ```bash
-# Combine o skill com dados do seu M365 para contexto completo
-copilot "Use o skill de meeting prep para preparar minha reunião de amanhã
+# Combine o agente com dados do seu M365 para contexto completo
+copilot "Use o agente de meeting prep para preparar minha reunião de amanhã
 com Votorantim. Busque no meu calendário e emails recentes para contexto."
 ```

@@ -1,8 +1,9 @@
-# 🏛️ Skill: Solution Design (Arquitetura de Solução)
+# 🏛️ Agent: Solution Design (Arquitetura de Solução)
 
 ## Propósito
-Criar propostas de arquitetura de solução end-to-end no Azure, incluindo
-componentes, integrações, considerações de custo e roadmap de implementação.
+Agente especializado em criar propostas de arquitetura de solução end-to-end
+no Azure, incluindo componentes, integrações, considerações de custo e roadmap
+de implementação.
 
 ## Quando usar
 - Resposta a RFPs / RFIs de clientes
