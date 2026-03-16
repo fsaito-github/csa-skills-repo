@@ -53,8 +53,18 @@ csa-skills-repo/
 │   │   └── waf-review.md             # Agente de análise Well-Architected Framework
 │   ├── arquitetura-solucao/
 │   │   └── solution-design.md        # Agente de design de arquitetura
-│   └── prep-reuniao/
-│       └── meeting-prep.md           # Agente de preparação para reuniões
+│   ├── prep-reuniao/
+│   │   └── meeting-prep.md           # Agente de preparação para reuniões
+│   ├── howto-tecnico/
+│   │   └── howto-tecnico.md          # Agente de escrita de how-tos em PT-BR
+│   ├── linkedin-tech-post/
+│   │   └── linkedin-tech-post.md     # Agente de posts técnicos
+│   └── advisor-impact/
+│       ├── advisor-impact.md          # 🔬 Agente de análise de impacto do Advisor
+│       └── knowledge/
+│           ├── impact-profiles.md     # Base de perfis de impacto por resource type
+│           └── dependency-queries.md  # KQL queries para Azure Resource Graph
+├── one-pagers/                        # One-pagers estilo AWS para cada agente proposto
 └── examples/
     ├── exemplos-de-uso.md            # Como usar cada agente
     └── output-*.md                   # Outputs reais gerados pelos agentes
@@ -68,6 +78,9 @@ csa-skills-repo/
 | **WAF Review** | Análise baseada no Well-Architected Framework | Revisão de arquiteturas de clientes, assessments, workshops |
 | **Solution Design** | Design de arquitetura de solução end-to-end | Propostas técnicas, respostas a RFPs, desenho de soluções |
 | **Meeting Prep** | Preparação estruturada para reuniões técnicas | Antes de reuniões com clientes, parceiros ou time interno |
+| **HowTo Técnico** | Escrita de how-tos técnicos em PT-BR | Documentação de procedimentos e guias passo-a-passo |
+| **LinkedIn Tech Post** | Criação de posts técnicos para LinkedIn/briefings | Divulgação de conhecimento e customer briefings |
+| **🔬 Advisor Impact** | Análise de impacto de recomendações do Azure Advisor | Quando o time precisa avaliar blast radius, risco e rollback antes de implementar uma recomendação. Integra Resource Graph + WorkIQ + ITSM |
 
 ## 🤝 Como contribuir
 
