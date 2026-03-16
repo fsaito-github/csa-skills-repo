@@ -1,0 +1,13 @@
+{
+  "name": "itsm-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MCP server for ITSM integration (ServiceNow, Jira SM, etc.)",
+  "main": "index.js",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

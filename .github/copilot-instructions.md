@@ -5,6 +5,32 @@ Você está auxiliando um **Cloud Solution Architect (CSA)** da Microsoft Brasil
 O CSA trabalha com clientes enterprise e mid-market em projetos de transformação digital
 usando a plataforma Azure e Microsoft Cloud.
 
+Este repositório segue a arquitetura **GH Copilot CLI Native**:
+- **Agents** (`.github/agents/`) — Workflows executáveis com YAML frontmatter
+- **Skills** (`.github/skills/`) — Base de conhecimento reutilizável
+- **MCP Servers** (`mcp/`) — Integrações externas via Model Context Protocol
+
+## Agentes Disponíveis
+
+| Agente | Arquivo | Quando usar |
+|--------|---------|-------------|
+| **🔬 Advisor Impact Analyzer** | `.github/agents/advisor-impact.agent.md` | Analisar impacto de recomendações do Azure Advisor antes de implementar |
+
+## Skills Disponíveis
+
+| Skill | Arquivo | Conteúdo |
+|-------|---------|----------|
+| **Impact Profiles** | `.github/skills/impact-profiles/SKILL.md` | Perfis de risco por resource type + recomendação |
+| **Dependency Queries** | `.github/skills/dependency-queries/SKILL.md` | KQL queries para Azure Resource Graph |
+
+## MCP Servers
+
+| Server | Diretório | Tools |
+|--------|-----------|-------|
+| **Azure Advisor** | `mcp/azure-advisor-mcp/` | list_recommendations, get_recommendation, get_advisor_score |
+| **Azure Resource Graph** | `mcp/azure-resource-graph-mcp/` | query_resources, get_resource_details, get_dependencies |
+| **ITSM** | `mcp/itsm-mcp/` | itsm_get_ci, itsm_get_ci_relationships, itsm_list_incidents, itsm_list_changes, itsm_get_known_errors, itsm_get_sla |
+
 ## Diretrizes gerais
 
 - **Idioma:** Responda em português brasileiro, mas use termos técnicos em inglês quando
@@ -33,3 +59,10 @@ usando a plataforma Azure e Microsoft Cloud.
 3. Mencione **pricing/licensing** quando relevante para a decisão
 4. Aponte **limitações conhecidas** ou **preview features** com clareza
 5. Sugira **próximos passos** concretos e acionáveis
+
+## Ao usar agentes
+
+1. Carregue as skills primárias do agent-registry.json
+2. Use MCP servers configurados em `.vscode/mcp.json`
+3. Salve artefatos em `agent-output/`
+4. Se um MCP server não responder, continue com as fontes disponíveis

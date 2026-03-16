@@ -1,0 +1,13 @@
+{
+  "name": "azure-resource-graph-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MCP server for Azure Resource Graph KQL queries",
+  "main": "index.js",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

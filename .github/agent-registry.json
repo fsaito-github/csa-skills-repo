@@ -1,0 +1,26 @@
+{
+  "$schema": "agent-registry-v1",
+  "agents": {
+    "advisor-impact": {
+      "agent": ".github/agents/advisor-impact.agent.md",
+      "model": "Claude Sonnet 4.6",
+      "skills": ["impact-profiles", "dependency-queries"],
+      "invokable": true,
+      "description": "Analisa impacto de recomendações do Azure Advisor com 3 camadas: Resource Graph + WorkIQ + ITSM"
+    }
+  },
+  "mcp_servers": {
+    "azure-advisor-mcp": {
+      "path": "mcp/azure-advisor-mcp/index.js",
+      "tools": ["list_recommendations", "get_recommendation", "get_advisor_score"]
+    },
+    "azure-resource-graph-mcp": {
+      "path": "mcp/azure-resource-graph-mcp/index.js",
+      "tools": ["query_resources", "get_resource_details", "get_dependencies"]
+    },
+    "itsm-mcp": {
+      "path": "mcp/itsm-mcp/index.js",
+      "tools": ["itsm_get_ci", "itsm_get_ci_relationships", "itsm_list_incidents", "itsm_list_changes", "itsm_get_known_errors", "itsm_get_sla"]
+    }
+  }
+}

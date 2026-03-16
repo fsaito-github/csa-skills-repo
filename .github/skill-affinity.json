@@ -1,0 +1,10 @@
+{
+  "$schema": "skill-affinity-v1",
+  "agents": {
+    "advisor-impact": {
+      "primary": ["impact-profiles", "dependency-queries"],
+      "secondary": [],
+      "never": []
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "servers": {
+    "azure-advisor-mcp": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${workspaceFolder}/mcp/azure-advisor-mcp/index.js"],
+      "env": {
+        "AZURE_SUBSCRIPTION_ID": "${AZURE_SUBSCRIPTION_ID}"
+      }
+    },
+    "azure-resource-graph-mcp": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${workspaceFolder}/mcp/azure-resource-graph-mcp/index.js"],
+      "env": {
+        "AZURE_SUBSCRIPTION_ID": "${AZURE_SUBSCRIPTION_ID}"
+      }
+    },
+    "itsm-mcp": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${workspaceFolder}/mcp/itsm-mcp/index.js"],
+      "env": {
+        "ITSM_TYPE": "servicenow",
+        "ITSM_URL": "${ITSM_URL}",
+        "ITSM_AUTH_TOKEN": "${ITSM_AUTH_TOKEN}"
+      }
+    }
+  }
+}

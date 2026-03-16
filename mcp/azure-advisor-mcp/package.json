@@ -1,0 +1,13 @@
+{
+  "name": "azure-advisor-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MCP server for Azure Advisor recommendations",
+  "main": "index.js",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
