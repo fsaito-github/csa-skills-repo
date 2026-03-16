@@ -172,41 +172,44 @@ Use o tool `ask_work_iq` para buscar contexto interno sobre o recurso ou serviç
 - Pode identificar o **owner real** (diferente da tag) que precisa aprovar a mudança
 - Pode encontrar **decisões anteriores** que explicam por que o recurso foi configurado assim
 
-#### 3. ITSM (ServiceNow, Jira Service Management, BMC, etc.)
-Se o cliente utiliza uma ferramenta de ITSM, consulte via API ou peça ao operador as seguintes informações:
+#### 3. ITSM via MCP (ServiceNow, Jira Service Management, BMC, etc.)
+O agente consome dados de ITSM através de **MCP servers plugáveis**. Cada ITSM é integrado
+via um MCP server que implementa o contrato definido em `knowledge/itsm-mcp-spec.md`.
 
-**Dados a buscar no ITSM:**
+**Tools MCP disponíveis (chamados automaticamente se o MCP server estiver configurado):**
 
-| Módulo ITSM | O que buscar | Por quê |
-|-------------|-------------|---------|
-| **CMDB** | Configuration Item (CI), classe, relações upstream/downstream | Identifica dependências que o Resource Graph pode não ver (ex: aplicações de negócio) |
-| **Incident Management** | Incidentes nos últimos 90 dias para este CI | Recurso instável = mais cautela na mudança |
-| **Change Management** | Change Requests abertas ou recentes para este CI | Evita conflito com mudanças já planejadas |
-| **Problem Management** | Known Errors e Problems ativos | Se há known error, a mudança pode piorar ou resolver |
-| **Service Level Management** | SLA/OLA do Business Service associado | Define janela de manutenção e impacto aceitável |
-| **Service Catalog** | Business Service e criticidade | Confirma criticidade real (pode diferir da tag Azure) |
+| Tool MCP | O que busca | Por quê |
+|----------|-------------|---------|
+| `itsm_get_ci` | Configuration Item no CMDB (classe, criticidade, owner, Business Service) | Identifica dependências invisíveis no Resource Graph |
+| `itsm_get_ci_relationships` | Relações upstream/downstream do CI | Mapa completo de blast radius de negócio |
+| `itsm_list_incidents` | Incidentes recentes (últimos 90 dias) | Recurso instável = mais cautela |
+| `itsm_list_changes` | Change Requests abertas/pendentes | Evita conflito com mudanças já planejadas |
+| `itsm_get_known_errors` | Known Errors e Problems ativos | Mudança pode piorar ou resolver problema existente |
+| `itsm_get_sla` | SLA/OLA do Business Service, janelas de manutenção | Define se downtime é aceitável e quando |
 
-**Queries de exemplo para ServiceNow (API):**
+**Fluxo de chamada:**
 ```
-# Buscar CI no CMDB
-GET /api/now/table/cmdb_ci?sysparm_query=name=<RESOURCE_NAME>
-
-# Buscar incidentes recentes
-GET /api/now/table/incident?sysparm_query=cmdb_ci=<CI_SYS_ID>^opened_at>javascript:gs.daysAgo(90)
-
-# Buscar change requests
-GET /api/now/table/change_request?sysparm_query=cmdb_ci=<CI_SYS_ID>^state!=closed
-
-# Buscar known errors
-GET /api/now/table/problem?sysparm_query=cmdb_ci=<CI_SYS_ID>^known_error=true
+1. Recebe recomendação do Advisor com nome do recurso
+2. Chama itsm_get_ci({ name: "<resource_name>" })
+3. Se CI encontrado:
+   a. itsm_get_ci_relationships({ ci_id: "<ci_id>" })
+   b. itsm_list_incidents({ ci_id: "<ci_id>", days_back: 90 })
+   c. itsm_list_changes({ ci_id: "<ci_id>" })
+   d. itsm_get_known_errors({ ci_id: "<ci_id>" })
+   e. itsm_get_sla({ ci_id: "<ci_id>" })
+4. Se CI NÃO encontrado: informar e continuar apenas com Resource Graph + WorkIQ
 ```
 
-**Por que ITSM é crítico:**
-- O CMDB pode revelar **dependências de negócio** invisíveis no Resource Graph (ex: "este storage é backend do sistema de folha de pagamento")
-- O histórico de incidentes mostra se o recurso é **estável ou problemático**
-- Change Requests abertas podem **conflitar** com a mudança proposta
-- O SLA do Business Service define se downtime é aceitável e qual a janela
-- Known Errors podem indicar que a mudança do Advisor **resolve** ou **piora** um problema existente
+**Como adicionar um novo ITSM:**
+Consulte `knowledge/itsm-setup-guide.md` — são 5 passos para criar um MCP server
+para qualquer ferramenta de ITSM. Configs prontos para ServiceNow e Jira SM
+estão em `connectors/`.
+
+**Por que MCP (e não API direta):**
+- O agente **não precisa saber** qual ITSM o cliente usa
+- Adicionar um novo ITSM **não requer alterar o agente** — apenas deploy de um novo MCP server
+- O contrato padronizado garante **consistência de dados** independente do ITSM backend
+- MCP é o **padrão aberto** suportado por GitHub Copilot, VS Code, Claude, e outros
 
 ### Regras
 
