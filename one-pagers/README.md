@@ -24,6 +24,7 @@
 | C4 | 📈 **Usage & Adoption Tracker Agent** | Wave 2 | [C4-usage-adoption-tracker-agent.md](C4-usage-adoption-tracker-agent.md) |
 | C5 | 🔍 **Migration Discovery Agent** | Wave 3 | [C5-migration-discovery-agent.md](C5-migration-discovery-agent.md) |
 | C6 | ⚙️ **InfraOps Lite Agent** | Wave 3 | [C6-infraops-lite-agent.md](C6-infraops-lite-agent.md) |
+| C7 | 🔬 **Advisor Impact Analyzer Agent** | Wave 1 | [C7-advisor-impact-analyzer-agent.md](C7-advisor-impact-analyzer-agent.md) |
 
 ---
 
@@ -31,7 +32,7 @@
 
 | Wave | Agentes | Critério |
 |------|---------|----------|
-| **Wave 1** (Quick Wins) | A1 + C1 + C3 | Alto impacto, baixa complexidade |
+| **Wave 1** (Quick Wins) | A1 + C1 + C3 + C7 | Alto impacto, customer pain-driven |
 | **Wave 2** (High Impact) | A2 + C2 + C4 | Alto impacto, complexidade média |
 | **Wave 3** (Advanced) | A3 + A4 + C5 + C6 | Avançados, dependem de Wave 1-2 |
 
@@ -51,6 +52,7 @@
 | C4. Usage & Adoption | ⭐⭐ | ⭐⭐⭐ | 🟢🟢🟢 | Média |
 | C5. Migration Discovery | ⭐⭐ | ⭐⭐⭐ | 🟢🟢 | Alta |
 | C6. InfraOps Lite | ⭐ | ⭐⭐⭐ | 🟢🟢🟢 | Alta |
+| C7. Advisor Impact | ⭐⭐ | ⭐⭐⭐ | 🟢🟢🟢 | Média |
 
 ---
 
