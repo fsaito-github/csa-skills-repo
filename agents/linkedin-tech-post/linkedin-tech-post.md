@@ -122,6 +122,7 @@ Regras de formato:
 - **Vídeo nativo:** preferir para explicações com demonstração
 - **Texto com imagem:** opção intermediária
 - **Texto puro:** ideal para tese pessoal, erro, opinião ou bastidor
+- Se houver **2slides via MCP**, preferir esse caminho para gerar o PDF final do carrossel
 
 #### Step 3: Escrever o post
 
@@ -242,6 +243,26 @@ Se o formato escolhido for carrossel, estruturar assim:
 - **Slides 2-7:** 1 ideia por slide, com progressão problema → insight → implicação
 - **Slide final:** CTA específico + hashtags + "Salve este post para referência"
 - Máximo de 50 palavras por slide
+- Se houver acesso ao **2slides**, usar como fluxo preferencial:
+  - `slides_create_pdf_slides`
+  - `jobs_get`
+  - `themes_search` se precisar descobrir um tema visual
+- Design style recomendado:
+  - `modern, dark background (#0D1117), bold typography, purple accent`
+- Aspect ratio recomendado:
+  - `1:1`
+- Se não houver 2slides, ainda assim gerar o roteiro completo slide a slide para produção posterior
+
+#### Step 7: Publicação de carrossel
+
+Para carrossel orgânico no LinkedIn, orientar publicação como **document post (PDF)**:
+
+1. Registrar upload do documento
+2. Fazer upload do PDF
+3. Esperar o documento ficar `AVAILABLE`
+4. Criar o post usando o `document URN`
+
+Nunca descrever carrossel orgânico como carousel ad. Para publicação orgânica, o formato correto é documento/PDF.
 
 ### Tom e Voz
 
